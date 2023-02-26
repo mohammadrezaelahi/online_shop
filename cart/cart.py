@@ -1,5 +1,6 @@
 from products.models import Product
 
+
 class Cart:
     def __init__(self, request):
         self.request = request
@@ -14,7 +15,8 @@ class Cart:
 
         self.cart = cart
 
-return sum([product.price for product in products])
+    def add(self, product, quantity=1):
+        product_id = str(product.id)
 
         if product_id not in self.cart:
             self.cart[product_id] = {"quantity": quantity}
@@ -23,7 +25,8 @@ return sum([product.price for product in products])
 
         self.save()
 
-return sum([product.price for product in products])
+    def remove(self, product):
+        product_id = str(product.id)
         if product_id in self.cart:
             del self.cart[product_id]
             self.save()
@@ -38,7 +41,8 @@ return sum([product.price for product in products])
 
         cart = self.cart.copy()
 
-return sum([product.price for product in products])
+        for product in products:
+            cart[str(product.id)]["product_obj"] = product
 
         for item in cart.values():
             yield item
