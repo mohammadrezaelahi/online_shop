@@ -57,8 +57,8 @@ INSTALLED_APPS = [
     "allauth.account",
     "rosetta",
 
-    "accounts",
-    "pages",
+    "accounts.apps.AccountsConfig",
+    "pages.apps.PagesConfig",
     "products",
     "cart",
 ]
