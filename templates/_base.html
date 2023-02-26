@@ -41,14 +41,14 @@
                             <a href="{% url "home" %}" class="logo">
                                 <figure class="logo--normal d-none d-sm-block">
                                     <img class="px-5" src="{% static "img/mre2.png" %}"
-                                         style="max-height: 100px; margin-bottom: -15px;" alt="Logo">
+                                         style="max-height: 50px; margin-bottom: -15px;" alt="Logo">
                                 </figure>
                             </a>
                         </div>
                         <div class="mainmenu-nav d-none d-lg-block w-100 pr-3">
                             <ul class="mainmenu d-lg-flex jusity-content-end jusity-content-lg-start pt-4">
                                 <li class="mainmenu__item menu-item-has-children active">
-                                    <a href="index.html" class="mainmenu__link">
+                                    <a href="{% url "product_list" %}" class="mainmenu__link">
                                         <span class="mm-text">خانه</span>
                                     </a>
                                 </li>
@@ -121,9 +121,25 @@
 </header>
 <!-- Header End -->
 
+
 {% if user.is_authenticated %}
     {{ user.username }}
 {% endif %}
+
+{% if messages %}
+    <div class="container text-center">
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+        
+    </div>
+{#    <ul class="messages">#}
+{#        {% for message in messages %}#}
+{#        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+{% endif %}
+
 {% block content %}
 
 {% endblock %}
@@ -143,11 +159,12 @@
                                 <ul class="footer-menu">
                                     <li><a href="">درباره ما</a></li>
                                     <li><a href="">قوانین و مقررات</a></li>
-                                    <li><a href="">تماس با ما</a></li>
+                                    <li><a href="https://t.me/mohammadreza_elahi">تماس با ما</a></li>
+                                    <span></span>
                                 </ul>
                             </div>
                             <div class="footer-widget">
-                                Codingyar.com © | all rights reserved
+                                mre © | all rights reserved
                             </div>
                         </div>
                     </div>
