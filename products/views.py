@@ -1,17 +1,8 @@
 from django.views import generic
-from django.shortcuts import get_object_or_404, redirect, render
-from django.utils.translation import gettext as _
-from django.contrib import messages
+from django.shortcuts import get_object_or_404
 
 from .models import Product, Comment
 from .forms import CommentForm
-
-
-def test_view(request):
-    result = _("Hello")
-    messages.success(request, _("this is success message."))
-    messages.error(request, _("this is danger message."))
-    return render(request, "products/test.html", {"result": result})
 
 
 class ProductListView(generic.ListView):
