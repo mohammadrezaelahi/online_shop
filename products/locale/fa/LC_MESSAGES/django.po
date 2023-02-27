@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-24 15:53+0330\n"
-"PO-Revision-Date: 2023-02-24 19:16+0330\n"
+"POT-Creation-Date: 2023-02-28 00:08+0330\n"
+"PO-Revision-Date: 2023-02-28 00:10+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -50,6 +50,10 @@ msgstr "متن نظر"
 msgid "what is your score?"
 msgstr "امتیاز شما کدام است؟"
 
+#: .\templates\products\product_detail.html:57
+msgid "add to cart"
+msgstr "افزودن به سبد خرید"
+
 #: .\templates\products\product_detail.html:77
 msgid "product description"
 msgstr "توضیحات محصول"
@@ -62,18 +66,15 @@ msgstr "نظر برای"
 msgid "write your comment"
 msgstr "نظر خود را وارد کنید"
 
-#: .\templates\products\product_detail.html:165
+#: .\templates\products\product_detail.html:167
 msgid "submit"
 msgstr "ارسال"
 
-#: .\views.py:11
-msgid "Hello"
-msgstr "سلام"
+#~ msgid "Hello"
+#~ msgstr "سلام"
 
-#: .\views.py:12
-msgid "this is success message."
-msgstr "این یک پیام موفقیت(سبز) است."
+#~ msgid "this is success message."
+#~ msgstr "این یک پیام موفقیت(سبز) است."
 
-#: .\views.py:13
-msgid "this is danger message."
-msgstr "این یک پیام کیری است."
+#~ msgid "this is danger message."
+#~ msgstr "این یک پیام کیری است."
