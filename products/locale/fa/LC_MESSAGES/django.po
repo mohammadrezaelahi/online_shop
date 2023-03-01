@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-01 20:02+0330\n"
-"PO-Revision-Date: 2023-03-01 19:44+0330\n"
+"POT-Creation-Date: 2023-03-01 21:23+0330\n"
+"PO-Revision-Date: 2023-03-01 21:23+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,63 +18,76 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\products\models.py:30
+#: .\models.py:30
 msgid "very bad"
 msgstr "خیلی بد"
 
-#: .\products\models.py:31
+#: .\models.py:31
 msgid "bad"
 msgstr "بد"
 
-#: .\products\models.py:32
+#: .\models.py:32
 msgid "normal"
 msgstr "متوسط"
 
-#: .\products\models.py:33
+#: .\models.py:33
 msgid "good"
 msgstr "خوب"
 
-#: .\products\models.py:34
+#: .\models.py:34
 msgid "very good"
 msgstr "خیلی خوب"
 
-#: .\products\models.py:40
+#: .\models.py:40
 msgid "comment author"
 msgstr "نظر دهنده"
 
-#: .\products\models.py:43
+#: .\models.py:43
 msgid "comment text"
 msgstr "متن نظر"
 
-#: .\products\models.py:44
+#: .\models.py:44
 msgid "what is your score?"
 msgstr "امتیاز شما کدام است؟"
 
-#: .\products\templates\products\product_detail.html:66
+#: .\templates\products\product_detail.html:66
+#: .\templates\products\product_list.html:85
 msgid "add to cart"
 msgstr "افزودن به سبد خرید"
 
-#: .\products\templates\products\product_detail.html:72
+#: .\templates\products\product_detail.html:72
 msgid "categories"
 msgstr "دسته بندی ها"
 
-#: .\products\templates\products\product_detail.html:88
+#: .\templates\products\product_detail.html:88
 msgid "product description"
 msgstr "توضیحات محصول"
 
-#: .\products\templates\products\product_detail.html:136
+#: .\templates\products\product_detail.html:136
 msgid "comment for"
 msgstr "نظر برای"
 
-#: .\products\templates\products\product_detail.html:171
+#: .\templates\products\product_detail.html:171
 msgid "write your comment"
 msgstr "نظر خود را وارد کنید"
 
-#: .\products\templates\products\product_detail.html:178
+#: .\templates\products\product_detail.html:180
 msgid "submit"
 msgstr "ارسال"
 
-#: .\products\views.py:42
+#: .\templates\products\product_detail.html:187
+msgid "only members can add comment"
+msgstr "برای نظر دادن باید عضو باشید"
+
+#: .\templates\products\product_detail.html:189
+msgid "login"
+msgstr "ورود"
+
+#: .\templates\products\product_detail.html:191
+msgid "signup"
+msgstr "ثبت نام"
+
+#: .\views.py:42
 msgid "comment added successfully ."
 msgstr "نظر شما با موفقیت ثبت شد."
 
