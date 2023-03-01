@@ -1,3 +1,4 @@
+{% load i18n %}
 <!doctype html>
 {% load static %}
 <html lang="en">
@@ -89,9 +90,12 @@
                                 <i class="flaticon flaticon-user"></i>
                             </a>
                             <ul class="user-info-menu">
+                                {% if user.is_authenticated %}
                                 <li>
-                                    <a class="text-right" href="my-account.html">حساب کاربری</a>
+                                    <a class="text-right" href="{% url "account_logout" %}">{% trans "log out" %}</a>
                                 </li>
+
+                                {% endif %}
                                 <li>
                                     <a class="text-right" href="cart.html">سبد خرید</a>
                                 </li>
@@ -129,49 +133,144 @@
 {% if messages %}
     <div class="container text-center">
         {% for message in messages %}
-        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
         {% endfor %}
-        
+
     </div>
-{#    <ul class="messages">#}
-{#        {% for message in messages %}#}
-{#        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>#}
-{#        {% endfor %}#}
-{#    </ul>#}
+    {#    <ul class="messages">#}
+    {#        {% for message in messages %}#}
+    {#        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>#}
+    {#        {% endfor %}#}
+    {#    </ul>#}
 {% endif %}
+
 
 {% block content %}
 
 {% endblock %}
 
-        <!-- Footer Start-->
-        <footer class="footer">
-            <div class="footer-top bg-color ptb--50" data-bg-color="#f6f6f6">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-9 text-center">
-                            <div class="footer-widget mb--50">
-                                <div class="textwidget">
-                                    <img src="{% static "img/mre.png" %}" alt="Logo">
-                                </div>
-                            </div>
-                            <div class="footer-widget mb--50 pb--1">
-                                <ul class="footer-menu">
-                                    <li><a href="">درباره ما</a></li>
-                                    <li><a href="">قوانین و مقررات</a></li>
-                                    <li><a href="https://t.me/mohammadreza_elahi">تماس با ما</a></li>
-                                    <span></span>
-                                </ul>
-                            </div>
-                            <div class="footer-widget">
-                                mre © | all rights reserved
-                            </div>
+<!-- Search form Popup Start -->
+<div class="searchform__popup" id="searchForm">
+    <a href="#" class="btn-close"><i class="flaticon flaticon-cross"></i></a>
+    <div class="searchform__body">
+        <p>در باکس زیر عبارت خود را وارد کنید</p>
+        <form class="searchform">
+            <input type="text" name="popup-search" id="popup-search" class="searchform__input"
+                   placeholder="جستجو در بین محصولات...">
+            <button type="submit" class="searchform__submit"><i
+                    class="flaticon flaticon-magnifying-glass-icon"></i></button>
+        </form>
+    </div>
+</div>
+<!-- Search form Popup End -->
+
+<!-- Mini Cart Start -->
+<aside class="mini-cart" id="miniCart">
+    <div class="mini-cart-wrapper">
+        <a href="" class="btn-close"><i class="flaticon flaticon-cross"></i></a>
+        <div class="mini-cart-inner">
+            <h3 class="mini-cart__heading mb--40 mb-lg--30 text-right">{% trans "cart" %}</h3>
+            <div class="mini-cart__content">
+                <ul class="mini-cart__list text-right">
+                    <li class="mini-cart__product d-flex justify-content-between">
+                        <div class="mini-cart__product__image">
+                            <a href="#">
+                                <img src="assets/img/products/prod-1-100x100.jpg" alt="products">
+                            </a>
                         </div>
+                        <div class="mini-cart__product__content pt-2">
+                                    <span class="mini-cart__product__title d-flex flex-row justify-content-between">
+                                        <a href="#"> محصول سماره یک </a>
+                                        <a href="#" class="">
+                                            &#10060;
+                                        </a>
+                                    </span>
+                            <span class="mini-cart__product__quantity">
+                                        <span>۴۹,۰۰۰ تومان</span> &#215; <span>۱</span>
+                                    </span>
+                        </div>
+                    </li>
+                    <li class="mini-cart__product d-flex justify-content-between">
+                        <div class="mini-cart__product__image">
+                            <a href="#">
+                                <img src="assets/img/products/prod-1-100x100.jpg" alt="products">
+                            </a>
+                        </div>
+                        <div class="mini-cart__product__content pt-2">
+                                    <span class="mini-cart__product__title d-flex flex-row justify-content-between">
+                                        <a href="#"> محصول سماره یک </a>
+                                        <a href="#" class="">
+                                            &#10060;
+                                        </a>
+                                    </span>
+                            <span class="mini-cart__product__quantity">
+                                        <span>۴۹,۰۰۰ تومان</span> &#215; <span>۱</span>
+                                    </span>
+                        </div>
+                    </li>
+                    <li class="mini-cart__product d-flex justify-content-between">
+                        <div class="mini-cart__product__image">
+                            <a href="#">
+                                <img src="assets/img/products/prod-1-100x100.jpg" alt="products">
+                            </a>
+                        </div>
+                        <div class="mini-cart__product__content pt-2">
+                                    <span class="mini-cart__product__title d-flex flex-row justify-content-between">
+                                        <a href="#"> محصول سماره یک </a>
+                                        <a href="#" class="">
+                                            &#10060;
+                                        </a>
+                                    </span>
+                            <span class="mini-cart__product__quantity">
+                                        <span>۴۹,۰۰۰ تومان</span> &#215; <span>۱</span>
+                                    </span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="mini-cart__total">
+                    <span>جمع کل</span>
+                    <span class="ammount">۱۴۸,۰۰۰ تومان</span>
+                </div>
+                <div class="mini-cart__buttons">
+                    <a href="{% url "cart:cart_detail" %}"
+                       class="btn btn-fullwidth btn-bg-sand mb--20">{% trans "go to cart" %}</a>
+                    <a href="checkout.html" class="btn btn-fullwidth btn-bg-sand">{% trans "pay" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+<!-- Mini Cart End -->
+
+
+<!-- Footer Start-->
+<footer class="footer">
+    <div class="footer-top bg-color ptb--50" data-bg-color="#f6f6f6">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 text-center">
+                    <div class="footer-widget mb--50">
+                        <div class="textwidget">
+                            <img src="{% static "img/mre.png" %}" alt="Logo">
+                        </div>
+                    </div>
+                    <div class="footer-widget mb--50 pb--1">
+                        <ul class="footer-menu">
+                            <li><a href="">درباره ما</a></li>
+                            <li><a href="">قوانین و مقررات</a></li>
+                            <li><a href="https://t.me/mohammadreza_elahi">تماس با ما</a></li>
+                            <span></span>
+                        </ul>
+                    </div>
+                    <div class="footer-widget">
+                        mre © | all rights reserved
                     </div>
                 </div>
             </div>
-        </footer>
-        <!-- Footer End-->
+        </div>
+    </div>
+</footer>
+<!-- Footer End-->
 
 
 <!-- ************************* JS Files ************************* -->
