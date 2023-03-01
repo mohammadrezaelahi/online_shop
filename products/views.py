@@ -42,7 +42,6 @@ class CommentCreateView(generic.CreateView):
         messages.success(self.request, _("comment added successfully ."))
         return super().form_valid(form)
 
-
 # def product_detail_view(request, pk):
 #     product = get_object_or_404(Product, pk=pk)
 #     fee = product.price + ((product.price*10) / 100)
