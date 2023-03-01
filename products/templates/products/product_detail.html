@@ -170,14 +170,28 @@
                                                     <div class="col-lg-8 m-auto">
                                                         <span class="reply-title pull-right">{% trans "write your comment" %}</span>
                                                         <br>
-                                                        <form action="{% url "comment_create" product.id %}"
-                                                              method="POST">
-                                                            {% csrf_token %}
-                                                            {{ comment_form|crispy }}
-                                                            <button type="submit"
-                                                                    class="btn btn-primary mt-2">{% trans "submit" %}
-                                                            </button>
-                                                        </form>
+                                                        {% if user.is_authenticated %}
+
+                                                            <form action="{% url "comment_create" product.id %}"
+                                                                  method="POST">
+                                                                {% csrf_token %}
+                                                                {{ comment_form|crispy }}
+                                                                <button type="submit"
+                                                                        class="btn btn-primary mt-2">{% trans "submit" %}
+                                                                </button>
+                                                            </form>
+                                                        {% else %}
+                                                            <br>
+                                                            <br>
+                                                            <div class="text-center">
+                                                            <h3 style="color: #3d292e">{% trans "only members can add comment" %}</h3>
+                                                                <a class="btn w-25"
+                                                                   href="{% url "account_login" %}">{% trans "login" %}</a>
+                                                                <a class="btn w-25"
+                                                                   href="{% url "account_signup" %}">{% trans "signup" %}</a>
+                                                            </div>
+
+                                                        {% endif %}
                                                     </div>
                                                 </div>
                                             </div>
