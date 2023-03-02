@@ -43,7 +43,11 @@
                                                             </a>
                                                         </td>
                                                         <td class="product-thumbnail text-left">
-                                                            <img src="assets/img/products/prod-10-70x88.jpg">
+                                                            {% if item.product_obj.image %}
+                                                            <img src="{{ item.product_obj.image.url }}">
+                                                            {% else %}
+                                                            <img src="{% static "img/not.jpg" %}">
+                                                            {% endif %}
                                                         </td>
                                                         <td class="product-name">
                                                             <h3>
