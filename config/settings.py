@@ -189,4 +189,4 @@ MESSAGE_TAGS = {
     message.ERROR: "danger",
 }
 
-
+LOCALE_PATHS = [BASE_DIR/"locale"]
