@@ -11,20 +11,8 @@
 {% block content %}
     <!-- Main Wrapper Start -->
     <div class="wrapper">
-
-        <!-- Breadcrumb area Start -->
-        <div class="breadcrumb-area bg-color ptb--90" data-bg-color="#f6f6f6">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="d-flex justify-content-between align-items-center flex-sm-row flex-column">
-                            <h1 class="page-title">جزئیات محصول «{{ product.title }}»</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Breadcrumb area End -->
+        {% trans "product detail" as header_caption %}
+        {% include "topheader.html" with top_header=product.title header_caption=header_caption %}
 
         <!-- Main Content Wrapper Start -->
         <div class="main-content-wrapper">
@@ -184,7 +172,7 @@
                                                             <br>
                                                             <br>
                                                             <div class="text-center">
-                                                            <h3 style="color: #3d292e">{% trans "only members can add comment" %}</h3>
+                                                                <h3 style="color: #3d292e">{% trans "only members can add comment" %}</h3>
                                                                 <a class="btn w-25"
                                                                    href="{% url "account_login" %}">{% trans "login" %}</a>
                                                                 <a class="btn w-25"
@@ -205,7 +193,7 @@
             </div>
         </div>
         <!-- Main Content Wrapper End -->
-{% include "cart/cart_side.html" %}
+        {% include "cart/cart_side.html" %}
 
 
         <!-- Global Overlay Start -->
