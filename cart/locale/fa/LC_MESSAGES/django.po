@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-01 23:09+0330\n"
-"PO-Revision-Date: 2023-03-01 22:08+0330\n"
+"PO-Revision-Date: 2023-03-02 15:49+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgstr "محصول با موفقیت به سبد خرید اضافه شد !"
 
 #: .\cart\cart.py:39
 msgid "product removed from cart successfully !"
-msgstr "محصول با موفقیت به سبد خرید اضافه شد !"
+msgstr "محصول با موفقیت از سبد خرید حذف شد !"
 
 #: .\cart\templates\cart\cart_detail.html:140
 msgid "Cart is Empty!  Go shopping . . ."
