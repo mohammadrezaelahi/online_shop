@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-01 23:09+0330\n"
-"PO-Revision-Date: 2023-03-01 23:12+0330\n"
+"PO-Revision-Date: 2023-03-02 23:30+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -28,23 +28,23 @@ msgstr "پروفایل"
 
 #: .\templates\_base.html:103
 msgid "login"
-msgstr ""
+msgstr "ورود"
 
 #: .\templates\_base.html:106
 msgid "Signup"
-msgstr ""
+msgstr "ثبت نام"
 
 #: .\templates\_base.html:174
 msgid "cart"
-msgstr ""
+msgstr "سبد خرید"
 
 #: .\templates\_base.html:238
 msgid "go to cart"
-msgstr ""
+msgstr "رفتن به سبد خرید"
 
 #: .\templates\_base.html:239
 msgid "pay"
-msgstr ""
+msgstr "پرداخت"
 
 #: .\templates\account\email\email_confirmation_massage.txt:5
 #, python-format
@@ -60,13 +60,13 @@ msgstr ""
 
 #: .\templates\account\email\email_confirmation_subject.txt:3
 msgid "Please confirm email"
-msgstr ""
+msgstr "لطفا ایمیل خود را تایید کنید"
 
 #: .\venv\Lib\site-packages\crispy_forms\tests\test_form_helper.py:130
 #: .\venv\Lib\site-packages\crispy_forms\tests\test_form_helper.py:140
 #: .\venv\Lib\site-packages\django\forms\fields.py:54
 msgid "This field is required."
-msgstr ""
+msgstr "این فیلد ضروری است"
 
 #: .\venv\Lib\site-packages\crispy_forms\tests\test_layout.py:392
 msgid "i18n text"
