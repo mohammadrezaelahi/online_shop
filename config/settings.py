@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     "pages.apps.PagesConfig",
     "products",
     "cart",
+    "persian_translate",
 ]
 
 SITE_ID = 1
