@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-05 23:43+0330\n"
-"PO-Revision-Date: 2023-03-05 23:44+0330\n"
-"Last-Translator:   <mre@mre.com>\n"
+"POT-Creation-Date: 2023-03-06 23:15+0330\n"
+"PO-Revision-Date: 2023-03-06 23:16+0330\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\models.py:9
+msgid "paid"
+msgstr "وضعیت پرداخت"
+
+#: .\models.py:11
+msgid "first name"
+msgstr "نام"
+
+#: .\models.py:12
+msgid "last name"
+msgstr "نام خانوادگی"
+
+#: .\models.py:13
+msgid "address"
+msgstr "آدرس"
+
+#: .\models.py:14
+msgid "phone number"
+msgstr "تلفن همراه"
 
 #: .\models.py:17
 msgid "date modified"
