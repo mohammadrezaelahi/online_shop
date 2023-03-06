@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-06 23:15+0330\n"
+"POT-Creation-Date: 2023-03-06 23:18+0330\n"
 "PO-Revision-Date: 2023-03-06 23:16+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,6 +39,10 @@ msgstr "آدرس"
 msgid "phone number"
 msgstr "تلفن همراه"
 
-#: .\models.py:17
+#: .\models.py:16
+msgid "order note"
+msgstr ""
+
+#: .\models.py:19
 msgid "date modified"
 msgstr "تاریخ ویرایش(پرداخت)"
