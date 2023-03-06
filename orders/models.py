@@ -18,6 +18,9 @@ class Order(models.Model):
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(verbose_name=_("date modified"), auto_now=True)
 
+    def __str__(self):
+        return f"Order {self.id}"
+
 
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name="items")
@@ -25,3 +28,5 @@ class OrderItem(models.Model):
     quantity = models.PositiveIntegerField(default=1)
     price = models.PositiveIntegerField()
 
+    def __str__(self):
+        return f"OrderItem {self.id} for product {self.product}"
