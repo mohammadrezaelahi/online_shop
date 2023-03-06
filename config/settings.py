@@ -65,6 +65,7 @@ INSTALLED_APPS = [
     "products",
     "cart",
     "persian_translate",
+    "orders.apps.OrdersConfig",
 ]
 
 SITE_ID = 1
