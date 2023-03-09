@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-06 23:18+0330\n"
-"PO-Revision-Date: 2023-03-06 23:16+0330\n"
+"POT-Creation-Date: 2023-03-09 14:55+0330\n"
+"PO-Revision-Date: 2023-03-09 14:57+0330\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -41,8 +41,16 @@ msgstr "تلفن همراه"
 
 #: .\models.py:16
 msgid "order note"
-msgstr ""
+msgstr "یادداشت"
 
 #: .\models.py:19
 msgid "date modified"
 msgstr "تاریخ ویرایش(پرداخت)"
+
+#: .\templates\orders\order_create.html:7
+msgid "order create"
+msgstr "ایجاد سفارش"
+
+#: .\templates\orders\order_create.html:12
+msgid "order"
+msgstr "سفارش"
