@@ -1,7 +1,9 @@
 {% extends "_base.html" %}
+{% load humanize %}
 {% load i18n %}
 {% load crispy_forms_tags %}
 {% load crispy_forms_filters %}
+{% load persian_translate_tags %}
 
 {% block page_title %}
 {% trans "order create" %}
@@ -72,27 +74,25 @@
                                         <thead>
                                             <tr>
                                                 <th>محصول</th>
+                                                <th>تعداد</th>
                                                 <th class="text-right">قیمت نهایی</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        {% for item in cart %}
                                             <tr>
-                                                <th>محصول شماره یک
-                                                    <strong><span>&#10005;</span>۲</strong>
+                                                <th>{{ item.product_obj.title }}</th>
+                                                <th>
+                                                    <strong>{{ item.quantity|translate_number }}</strong>
                                                 </th>
-                                                <td class="text-right">۲۹۶,۰۰۰ تومان</td>
+                                                <td class="text-right">{{item.product_obj.price|intcomma:False|translate_number}} تومان</td>
                                             </tr>
-                                            <tr>
-                                                <th>محصول شماره دو
-                                                    <strong><span>&#10005;</span>۱</strong>
-                                                </th>
-                                                <td class="text-right">۵۸,۰۰۰ تومان</td>
-                                            </tr>
+                                        {% endfor %}
                                         </tbody>
                                         <tfoot>
                                             <tr class="cart-subtotal">
                                                 <th>مجموع</th>
-                                                <td class="text-right">۳۴۸,۰۰۰ تومان</td>
+                                                <td class="text-right">{{cart.get_total_price|intcomma:False|translate_number}} تومان</td>
                                             </tr>
                                         </tfoot>
                                     </table>
